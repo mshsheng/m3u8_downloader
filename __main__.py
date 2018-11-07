@@ -14,14 +14,9 @@ urls=net_format.urls()
 headers = net_format.headers_pack()
 
 # download
-download.m3u8_download(m3u8_url=urls['m3u8_url'],headers=headers)
-
 main_url = urls['main_url']
 
-m3u8_path = 'temp.m3u8'
-m3u8_file = open(m3u8_path,'r')
-m3u8_content = m3u8_file.readlines()
-m3u8_file.close()
+m3u8_content = download.m3u8_download(m3u8_url=urls['m3u8_url'],headers=headers)
 
 key_url = decrypt.get_key_url(m3u8_content)
 key = decrypt.get_key(key_url)
