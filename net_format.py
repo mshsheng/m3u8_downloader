@@ -1,6 +1,6 @@
 # headers打包
 def headers_pack():
-    referer = input('referer: ') # 必要参数
+    referer = input('Referer: ') # 必要参数
     ua = 'Mozilla/5.0 (iPad; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1'
     connection = 'keep-alive'
     accept = '*/*'
@@ -18,7 +18,7 @@ def headers_pack():
 
 # 获取绝对路径
 def urls():
-    m3u8_url = input('m3u8 url: ')
+    m3u8_url = input('M3U8 URL: ')
     length = m3u8_url.find('drm')+4
     main_url = m3u8_url[0:length]
     urldict = {'m3u8_url': m3u8_url,'main_url': main_url}
